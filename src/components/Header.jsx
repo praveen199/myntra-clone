@@ -1,13 +1,20 @@
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaFaceGrinHearts } from "react-icons/fa6";
 import { FaBagShopping } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
       <header>
         <div className="logo_container">
-          <a href="#"><img className="myntra_home" src="images/myntra_logo.webp" alt="Myntra Home" /></a>
+          <a href="#">
+            <img
+              className="myntra_home"
+              src="images/myntra_logo.webp"
+              alt="Myntra Home"
+            />
+          </a>
         </div>
         <nav className="nav_bar">
           <a href="#">Men</a>
@@ -15,17 +22,22 @@ const Header = () => {
           <a href="#">Kids</a>
           <a href="#">Home & Living</a>
           <a href="#">Beauty</a>
-          <a href="#">Studio <sup>New</sup></a>
+          <a href="#">
+            Studio <sup>New</sup>
+          </a>
         </nav>
         <div className="search_bar">
           <span className="material-symbols-outlined search_icon">search</span>
-          <input className="search_input" placeholder="Search for products, brands and more" />
+          <input
+            className="search_input"
+            placeholder="Search for products, brands and more"
+          />
         </div>
         <div className="action_bar">
-          <div className="action_container">
+          <Link to="/login" className="action_container">
             <BsFillPersonFill />
             <span className="action_name">Profile</span>
-          </div>
+          </Link>
 
           <div className="action_container">
             <FaFaceGrinHearts />
@@ -40,6 +52,6 @@ const Header = () => {
         </div>
       </header>
     </>
-  )
-}
-export default Header
+  );
+};
+export default Header;
